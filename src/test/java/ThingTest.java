@@ -18,4 +18,6 @@ class ThingTest {
         assertThat(42)
                 .isEqualTo(42);
     }
+
+
 }
