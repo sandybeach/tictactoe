@@ -1,36 +1,47 @@
-# Java JUnit5
+# Tic Tac Toe
+## About this kata
 
-A minimal setup with Java, [JUnit5](https://junit.org/junit5/), [AssertJ](https://assertj.github.io/doc/) and [Mockito](https://site.mockito.org/) to get you started.
+Like many game kata, it’s a good introduction to double loop TDD or BDD.
 
-You can use [gradle](https://gradle.org/) or [maven](https://maven.apache.org/)
+## Rules
 
-[More complicated JUnit5 setups](https://github.com/junit-team/junit5-samples)
+The rules of the tic tac toe game are the following:
+  - a game is over when all fields are taken
+  - a game is over when all fields in a column are taken by a player
+  - a game is over when all fields in a row are taken by a player
+  - a game is over when all fields in a diagonal are taken by a player
+  - a player can take a field if not already taken
+  - players take turns taking fields until the game is over
+  - there are two player in the game (X and O)
 
-## Setup
+## Suggested Test Cases
 
-    git clone https://github.com/swkBerlin/kata-bootstraps
-    cd java/junit5
+```
+Given this game board
 
-Open as preexisting project in your favorite IDE and choose between gradle or maven nature
++---+---+---+
+| 1 | 2 | 3 |
++---+---+---+
+| 4 | 5 | 6 |
++---+---+---+
+| 7 | 8 | 9 |
++---+---+---+
 
-## (optional) IDE Setup
+And it's the turn of player X
+When it play on cell 5
+Then the board is now
 
-Run `./gradlew idea` to build [idea](https://www.jetbrains.com/idea) project.
++---+---+---+
+| 1 | 2 | 3 |
++---+---+---+
+| 4 | X | 6 |
++---+---+---+
+| 7 | 8 | 9 |
++---+---+---+
 
-## Running Tests
+And it's not the end of game.
+```
 
-To execute the tests either run `./gradlew test`, `mvn test` or run the tests from the IDE you are using
+## Links
 
-## Test Libraries Available from the Get-Go
-- [JUnit 5.8.2](https://junit.org/junit5/docs/snapshot/release-notes/#release-notes-5.8.2)
-- [AssertJ 3.22.0](https://assertj.github.io/doc/#assertj-core-release-notes)
-- [Mockito 4.3.1](https://github.com/mockito/mockito/releases)
-
-
-## Additional Libraries
-- [Vavr](https://www.vavr.io/) a functional library for Java.
-
-
-This repo was tested with [idea](https://www.jetbrains.com/idea) [2020.3.1](https://confluence.jetbrains.com/display/IDEADEV/IntelliJ+IDEA+2020.3.1+%28203.6682.168+build%29+Release+Notes), if you encounter problems please open an issue or send a pull request.
-
-Have fun!
+One solution in GoLang : https://gitlab.com/tclavier/tic-tac-toe-golang
