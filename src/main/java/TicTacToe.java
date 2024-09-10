@@ -14,10 +14,10 @@ public class TicTacToe {
   }
 
   public Boolean isOver() {
-    return cells != null;
+    return cells != null ;
   }
 
   public String getWinner() {
-    return "X";
+    return  cells.stream().filter(cell-> cell.equals("X")).count() == cells.stream().filter(cell-> cell.equals("O")).count() ? "O" : "X";
   }
 }

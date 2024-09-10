@@ -12,7 +12,7 @@ public class TicTacToeTest {
   }
 
   @Test
-  void a_game_is_over_when_all_fields_in_a_column_are_taken_by_a_player() {
+  void a_game_is_over_when_all_fields_in_a_column_are_taken_by_player_X() {
     /**
      * +---+---+---+
      * | X | O | O |
@@ -30,6 +30,18 @@ public class TicTacToeTest {
     assertThat(game.isOver()).isTrue();
     assertThat(game.getWinner()).isEqualTo("X");
   }
+
+  @Test
+  void a_game_is_over_when_all_fields_in_a_column_are_taken_by_player_O() {
+    TicTacToe game = new TicTacToe(
+            "O", "X", "X",
+            "O", "X", "",
+            "O", "", "");
+
+    assertThat(game.isOver()).isTrue();
+    assertThat(game.getWinner()).isEqualTo("O");
+  }
+
 
   /*
    * -1 player take 1 column => win
