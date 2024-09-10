@@ -10,7 +10,7 @@ public class TicTacToe {
   }
 
   public TicTacToe() {
-    // TODO Auto-generated constructor stub
+    this.cells = List.of("", "", "", "", "", "", "", "", "");
   }
 
   public Boolean isOver() {
